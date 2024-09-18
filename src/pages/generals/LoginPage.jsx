@@ -66,7 +66,7 @@ const LoginPage = () => {
     <div className="container mx-auto flex items-center justify-center min-h-screen">
       <Card className="w-[350px]">
         <CardHeader>
-          <CardTitle>Sign in</CardTitle>
+          <CardTitle>Login</CardTitle>
           <CardDescription></CardDescription>
         </CardHeader>
         <CardContent>
