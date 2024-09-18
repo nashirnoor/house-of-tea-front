@@ -31,9 +31,14 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (user?.role === "admin") {
+      console.log("is admin check")
       navigate("/store");
     } else if (user?.role === "branch_manager") {
+      console.log("is branch manger chekc")
       navigate("/branch");
+    }
+    else{
+      console.log(user,"here is teh users")
     }
   }, [user, navigate]);
 
@@ -45,6 +50,7 @@ const LoginPage = () => {
     validationSchema: LoginSchema,
     onSubmit: async (values) => {
       try {
+        console.log("Login form submitted:", values);
         await dispatch(loginUser(values)).unwrap();
         // Navigation will be handled by the useEffect hook
       } catch (error) {
